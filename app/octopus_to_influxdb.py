@@ -102,7 +102,7 @@ def store_series(connection, series, metrics, rate_data):
         time = period.datetime().strftime('%H:%M')
         return {
             'active_rate': active_rate_field(measurement),
-            'time_of_day': time,
+            #'time_of_day': time,
         }
 
     measurements = [
