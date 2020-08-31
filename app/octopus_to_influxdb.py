@@ -191,7 +191,7 @@ def cmd(config_file, from_date, to_date):
             ),
             'unit_rate': config.getfloat('gas', 'unit_rate', fallback=0.0),
             # SMETS1 meters report kWh, SMET2 report m^3 and need converting to kWh first
-            'conversion_factor': (g_vcf * g_cv) / 3.6 if int(g_meter_type) > 1 else None,
+            'conversion_factor': (float(g_vcf) * float(g_cv)) / 3.6 if int(g_meter_type) > 1 else None,
         }
     }
 
